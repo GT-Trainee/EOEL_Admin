@@ -1,0 +1,25 @@
+{
+    "users": [
+      { "id": 1, "name": "John Doe", "role": "Train Conductor", "contact": "john.doe@railway.com", "status": "active", "department": "Operations" },
+      { "id": 2, "name": "Jane Smith", "role": "Station Master", "contact": "jane.smith@railway.com", "status": "inactive", "department": "Station Management" },
+      { "id": 3, "name": "Michael Johnson", "role": "Maintenance Engineer", "contact": "michael.johnson@railway.com", "status": "active", "department": "Maintenance" },
+      { "id": 4, "name": "Emily Davis", "role": "Ticket Inspector", "contact": "emily.davis@railway.com", "status": "active", "department": "Customer Service" },
+      { "id": 5, "name": "Robert Brown", "role": "Train Driver", "contact": "robert.brown@railway.com", "status": "inactive", "department": "Operations" },
+      { "id": 6, "name": "Laura Wilson", "role": "Scheduler", "contact": "laura.wilson@railway.com", "status": "active", "department": "Scheduling" },
+      { "id": 7, "name": "James Miller", "role": "Customer Service", "contact": "james.miller@railway.com", "status": "active", "department": "Customer Service" },
+      { "id": 8, "name": "Olivia Taylor", "role": "Safety Inspector", "contact": "olivia.taylor@railway.com", "status": "inactive", "department": "Safety" },
+      { "id": 9, "name": "William Anderson", "role": "Operations Manager", "contact": "william.anderson@railway.com", "status": "active", "department": "Management" },
+      { "id": 10, "name": "Sophia Thomas", "role": "IT Specialist", "contact": "sophia.thomas@railway.com", "status": "active", "department": "IT" },
+      { "id": 11, "name": "Daniel Martinez", "role": "Logistics Coordinator", "contact": "daniel.martinez@railway.com", "status": "inactive", "department": "Logistics" },
+      { "id": 12, "name": "Isabella Hernandez", "role": "Field Engineer", "contact": "isabella.hernandez@railway.com", "status": "active", "department": "Engineering" },
+      { "id": 13, "name": "Matthew Lee", "role": "Administrative Assistant", "contact": "matthew.lee@railway.com", "status": "inactive", "department": "Administration" },
+      { "id": 14, "name": "Mia Clark", "role": "Signal Technician", "contact": "mia.clark@railway.com", "status": "active", "department": "Maintenance" },
+      { "id": 15, "name": "Ethan Lewis", "role": "Project Manager", "contact": "ethan.lewis@railway.com", "status": "active", "department": "Project Management" },
+      { "id": 16, "name": "Charlotte Walker", "role": "Train Operations Coordinator", "contact": "charlotte.walker@railway.com", "status": "inactive", "department": "Operations" },
+      { "id": 17, "name": "Aiden Hall", "role": "Infrastructure Engineer", "contact": "aiden.hall@railway.com", "status": "active", "department": "Engineering" },
+      { "id": 18, "name": "Amelia Young", "role": "Compliance Officer", "contact": "amelia.young@railway.com", "status": "inactive", "department": "Compliance" },
+      { "id": 19, "name": "Jacob Allen", "role": "Construction Manager", "contact": "jacob.allen@railway.com", "status": "active", "department": "Construction" },
+      { "id": 20, "name": "Lily King", "role": "Quality Assurance Specialist", "contact": "lily.king@railway.com", "status": "active", "department": "Quality Assurance" }
+    ]
+  }
+  

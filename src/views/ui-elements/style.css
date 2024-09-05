@@ -1,0 +1,87 @@
+/* Add custom styles for the grid */
+.ag-theme-alpine .ag-header {
+    background-color: #f8f9fa; /* Light background for headers */
+    border-bottom: 1px solid #dee2e6; /* Subtle border for header separation */
+  }
+  
+  .ag-theme-alpine .ag-row {
+    transition: background-color 0.3s ease; /* Smooth row highlight on hover */
+  }
+  
+  .ag-theme-alpine .ag-row:hover {
+    background-color: #e9ecef; /* Light grey highlight on row hover */
+  }
+  
+  .ag-theme-alpine .ag-cell {
+    font-size: 14px; /* Standard font size */
+    line-height: 1.5; /* Improved readability */
+  }
+  .grid {
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    padding: 5px; /* Optional: Adds space inside the box */
+    background-color: #fff; /* Optional: Sets a background color */
+  }
+  
+ /* styles.css */
+
+.custom-pagination .pagination {
+    justify-content: center;
+  }
+  
+  .custom-pagination .page-item.active .page-link {
+    background-color: #28a745; /* Green background for active page */
+    border-color: #28a745; /* Green border for active page */
+  }
+  
+  .custom-pagination .page-link {
+    color: #007bff; /* Default color for pagination links */
+    border: 1px solid #007bff; /* Border color for pagination links */
+  }
+  
+  .custom-pagination .page-link:hover {
+    background-color: #e9ecef; /* Light gray background on hover */
+    border-color: #007bff; /* Border color on hover */
+  }
+  
+  .custom-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .custom-card .card-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .custom-card .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .custom-card .table {
+    margin-top: 20px;
+  }
+  
+  .custom-card .btn {
+    margin-top: 20px;
+  }
+  
+  /* styles.css */
+.small-input {
+    max-width: 300px; /* Adjust width as needed */
+    margin: auto;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem; /* Adjust spacing between form fields */
+  }
+  
+  button {
+    margin-top: 1rem; /* Space between last input and button */
+  }
+  
+  .text-muted {
+    margin-top: 0.25rem; /* Space above the help text */
+  }
+  
