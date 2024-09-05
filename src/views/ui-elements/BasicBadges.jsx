@@ -32,7 +32,9 @@ const BasicBadges = () => {
     <Badge key={idx} pill bg={variant} className={variant === 'light' ? 'mx-2 text-dark' : 'mx-2'}>
       {variant}
     </Badge>
+    
   ));
+  
 
   const linkBadges = buttonVariants.map((variant, idx) => (
     <Link to="#" key={idx}>

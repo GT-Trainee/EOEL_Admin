@@ -1,7 +1,7 @@
 import React, { Suspense, Fragment, lazy } from 'react';
 import { Routes, Navigate, Route } from 'react-router-dom';
 
-// project import
+// Project import
 import Loader from './components/Loader/Loader';
 import AdminLayout from './layouts/AdminLayout';
 
@@ -35,6 +35,10 @@ const renderRoutes = (routes = []) => (
 );
 
 export const routes = [
+  {
+    path: '/',
+    element: () => <Navigate to="/auth/signin-1" /> // Redirect to SignIn1 initially
+  },
   {
     exact: 'true',
     path: '/auth/signup-1',
@@ -79,7 +83,6 @@ export const routes = [
         path: '/basic/collapse',
         element: lazy(() => import('./views/ui-elements/BasicCollapse'))
       },
-
       {
         exact: 'true',
         path: '/basic/typography',

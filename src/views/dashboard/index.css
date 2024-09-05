@@ -1,0 +1,23 @@
+.table-container {
+    position: relative;
+    overflow: auto;
+    height: 362px; /* Adjust the height as needed */
+  }
+  
+  .table-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-container thead {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    background: white; /* Background color to match the table or page */
+    z-index: 1; /* Ensure the header stays on top */
+  }
+  
+  .table-container th {
+    border-bottom: 1px solid #dee2e6; /* Border color for the table header */
+  }
+  

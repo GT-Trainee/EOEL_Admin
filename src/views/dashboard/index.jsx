@@ -6,6 +6,7 @@ import { Row, Col, Card, Table, ListGroup } from 'react-bootstrap';
 // third party
 import Chart from 'react-apexcharts';
 import PerfectScrollbar from 'react-perfect-scrollbar';
+import './index.css';
 
 // project import
 import OrderCard from '../../components/Widgets/Statistic/OrderCard';
@@ -31,53 +32,53 @@ const DashAnalytics = () => {
         <Col md={6} xl={3}>
           <OrderCard
             params={{
-              title: 'Orders Received',
+              title: 'On Time Trains',
               class: 'bg-c-blue',
-              icon: 'feather icon-shopping-cart',
-              primaryText: '486',
-              secondaryText: 'Completed Orders',
-              extraText: '351'
+              icon: 'fa fa-train',
+              primaryText: '4',
+              secondaryText: 'Total On time Trains',
+              extraText: '10'
             }}
           />
         </Col>
         <Col md={6} xl={3}>
           <OrderCard
             params={{
-              title: 'Total Sales',
+              title: 'Early Trains',
               class: 'bg-c-green',
-              icon: 'feather icon-tag',
-              primaryText: '1641',
-              secondaryText: 'This Month',
-              extraText: '213'
+              icon: 'fa fa-clock',
+              primaryText: '1',
+              secondaryText: 'Total Early Trains',
+              extraText: '5'
             }}
           />
         </Col>
         <Col md={6} xl={3}>
           <OrderCard
             params={{
-              title: 'Revenue',
+              title: 'Delayed Trains',
               class: 'bg-c-yellow',
-              icon: 'feather icon-repeat',
-              primaryText: '$42,562',
-              secondaryText: 'This Month',
-              extraText: '$5,032'
+              icon: 'fa fa-exclamation-triangle',
+              primaryText: '3',
+              secondaryText: 'Total Delayed Trains',
+              extraText: '5'
             }}
           />
         </Col>
         <Col md={6} xl={3}>
           <OrderCard
             params={{
-              title: 'Total Profit',
+              title: 'Canceled Trains',
               class: 'bg-c-red',
-              icon: 'feather icon-award',
-              primaryText: '$9,562',
-              secondaryText: 'This Month',
-              extraText: '$542'
+              icon: 'fa fa-times',
+              primaryText: '2',
+              secondaryText: 'Total Canceled Trains',
+              extraText: '7'
             }}
           />
         </Col>
 
-        <Col md={12} xl={6}>
+        {/* <Col md={12} xl={6}>
           <Card>
             <Card.Header>
               <h5>Unique Visitor</h5>
@@ -255,127 +256,172 @@ const DashAnalytics = () => {
               </ListGroup>
             </Card.Body>
           </Card>
-        </Col>
+        </Col> */}
 
         <Col sm={12}>
           <Card>
             <Card.Header>
-              <Card.Title as="h5">Campaign Monitor</Card.Title>
+              <Card.Title as="h5">Train Monitering</Card.Title>
             </Card.Header>
             <Card.Body className="p-0">
-              <div className="table-card" style={{ height: '362px' }}>
+              <div className="table-card table-container" style={{ height: '362px' }}>
                 <PerfectScrollbar>
                   <Table responsive>
                     <thead>
                       <tr>
                         <th>
-                          <span>Campaign date</span>
+                          <span>Journey date</span>
                         </th>
                         <th>
-                          <span>Click</span>
+                          <span>Train ID</span>
                         </th>
                         <th>
-                          <span>Cost</span>
+                          <span>Journey From</span>
                         </th>
                         <th>
-                          <span>CTR</span>
+                          <span>Journey To</span>
                         </th>
                         <th>
-                          <span>ARPU</span>
+                          <span>Current Location</span>
                         </th>
                         <th>
-                          <span>ECPI</span>
+                          <span>Status</span>
                         </th>
                         <th>
-                          <span>ROI</span>
+                          <span>Time Efficiency</span>
                         </th>
                         <th>
-                          <span>Revenue</span>
+                          <span>Energy Efficiency</span>
                         </th>
                         <th>
-                          <span>Conversions</span>
+                          <span>Update</span>
                         </th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>08-11-2016</td>
-                        <td>786</td>
-                        <td>485</td>
-                        <td>769</td>
-                        <td>45,3%</td>
-                        <td>6,7%</td>
-                        <td>8,56</td>
-                        <td>10:55</td>
-                        <td>33.8%</td>
+                        <td>01-09-2024</td>
+                        <td>1214522</td>
+                        <td>Mumbai Lokmanya Tilak</td>
+                        <td>Mumbai</td>
+                        <td>Pune</td>
+                        <td> <span className="badge bg-success">On Time</span></td>
+                        <td style={{ color: "green" }}>+5 min</td>
+                        <td>2.5 KWh</td>
+                        <td><i className='fa fa-edit' style={{ color: 'green' }}></i></td>
                       </tr>
                       <tr>
-                        <td>15-10-2016</td>
-                        <td>786</td>
-                        <td>523</td>
-                        <td>736</td>
-                        <td>78,3%</td>
-                        <td>6,6%</td>
-                        <td>7,56</td>
-                        <td>4:30</td>
-                        <td>76.8%</td>
+                        <td>02-09-2024</td>
+                        <td>1213446</td>
+                        <td>Pune Junction</td>
+                        <td>Pune</td>
+                        <td>Mumbai Lokmanya Tilak</td>
+                        <td><span className="badge bg-danger">Delayed</span></td>
+                        <td style={{ color: "red" }}>-20 min</td>
+                        <td>3.0 KWh</td>
+                        <td><i className='fa fa-edit' style={{ color: 'green' }}></i></td>
                       </tr>
                       <tr>
-                        <td>08-08-2017</td>
-                        <td>624</td>
-                        <td>436</td>
-                        <td>756</td>
-                        <td>78,3%</td>
-                        <td>6,4%</td>
-                        <td>9,45</td>
-                        <td>9:05</td>
-                        <td>8.63%</td>
+                        <td>03-09-2024</td>
+                        <td>1102305</td>
+                        <td>Nagpur</td>
+                        <td>Nagpur</td>
+                        <td>Mumbai Chhatrapati Shivaji</td>
+                        <td> <span className="badge bg-success">On Time</span></td>
+                        <td style={{ color: "green" }}>+10 min</td>
+                        <td>2.8 KWh</td>
+                        <td><i className='fa fa-edit' style={{ color: 'green' }}></i></td>
                       </tr>
                       <tr>
-                        <td>11-12-2017</td>
-                        <td>423</td>
-                        <td>123</td>
-                        <td>756</td>
-                        <td>78,6%</td>
-                        <td>45,6%</td>
-                        <td>6,85</td>
-                        <td>7:45</td>
-                        <td>33.8%</td>
+                        <td>04-09-2024</td>
+                        <td>1123006</td>
+                        <td>Mumbai Chhatrapati Shivaji</td>
+                        <td>Mumbai</td>
+                        <td>Nagpur</td>
+                        <td> <span className="badge bg-success">On Time</span></td>
+                        <td style={{ color: "green" }}>+7 min</td>
+                        <td>2.6 KWh</td>
+                        <td><i className='fa fa-edit' style={{ color: 'green' }}></i></td>
                       </tr>
                       <tr>
-                        <td>05-06-2015</td>
-                        <td>465</td>
-                        <td>463</td>
-                        <td>456</td>
-                        <td>68,6%</td>
-                        <td>76,6%</td>
-                        <td>7,56</td>
-                        <td>8:45</td>
-                        <td>39.8%</td>
+                        <td>05-09-2024</td>
+                        <td>1112027</td>
+                        <td>Aurangabad</td>
+                        <td>Aurangabad</td>
+                        <td>Mumbai Lokmanya Tilak</td>
+                        <td><span className="badge bg-danger">Delayed</span></td>
+                        <td style={{ color: "red" }}>-15 min</td>
+                        <td>2.9 KWh</td>
+                        <td><i className='fa fa-edit' style={{ color: 'green' }}></i></td>
                       </tr>
                       <tr>
-                        <td>08-11-2016</td>
-                        <td>786</td>
-                        <td>485</td>
-                        <td>769</td>
-                        <td>45,3%</td>
-                        <td>6,7%</td>
-                        <td>8,56</td>
-                        <td>10:55</td>
-                        <td>33.8%</td>
+                        <td>06-09-2024</td>
+                        <td>1167029</td>
+                        <td>Solapur</td>
+                        <td>Solapur</td>
+                        <td>Pune Junction</td>
+                        <td> <span className="badge bg-success">On Time</span></td>
+                        <td style={{ color: "green" }}>+8 min</td>
+                        <td>2.7 KWh</td>
+                        <td><i className='fa fa-edit' style={{ color: 'green' }}></i></td>
                       </tr>
                       <tr>
-                        <td>15-10-2016</td>
-                        <td>786</td>
-                        <td>523</td>
-                        <td>736</td>
-                        <td>78,3%</td>
-                        <td>6,6%</td>
-                        <td>7,56</td>
-                        <td>4:30</td>
-                        <td>76.8%</td>
+                        <td>07-09-2024</td>
+                        <td>1108933</td>
+                        <td>Thane</td>
+                        <td>Thane</td>
+                        <td>Mumbai Lokmanya Tilak</td>
+                        <td><span className="badge bg-danger ">Delayed</span></td>
+                        <td style={{ color: "red" }}>-25 min</td>
+                        <td>3.2 KWh</td>
+                        <td><i className='fa fa-edit' style={{ color: 'green' }}></i></td>
+                      </tr>
+                      <tr>
+                        <td>08-09-2024</td>
+                        <td>1210942</td>
+                        <td>Kolhapur</td>
+                        <td>Kolhapur</td>
+                        <td>Mumbai Lokmanya Tilak</td>
+                        <td> <span className="badge bg-success">On Time</span></td>
+                        <td style={{ color: "green" }}>+12 min</td>
+                        <td>2.4 KWh</td>
+                        <td><i className='fa fa-edit' style={{ color: 'green' }}></i></td>
+                      </tr>
+                      <tr>
+                        <td>09-09-2024</td>
+                        <td>1213447</td>
+                        <td>Nasik</td>
+                        <td>Nasik</td>
+                        <td>Mumbai Lokmanya Tilak</td>
+                        <td><span className="badge bg-danger">Delayed</span></td>
+                        <td style={{ color: "red" }}>-18 min</td>
+                        <td>3.1 KWh</td>
+                        <td><i className='fa fa-edit' style={{ color: 'green' }}></i></td>
+                      </tr>
+                      <tr>
+                        <td>10-09-2024</td>
+                        <td>1212353</td>
+                        <td>Dharmabad</td>
+                        <td>Dharmabad</td>
+                        <td>Mumbai Lokmanya Tilak</td>
+                        <td> <span className="badge bg-success">On Time</span></td>
+                        <td style={{ color: "green" }}>+6 min</td>
+                        <td>2.6 KWh</td>
+                        <td><i className='fa fa-edit' style={{ color: 'green' }}></i></td>
+                      </tr>
+                      <tr>
+                        <td>11-09-2024</td>
+                        <td>1212355</td>
+                        <td>Jalgaon</td>
+                        <td>Jalgaon</td>
+                        <td>Mumbai Lokmanya Tilak</td>
+                        <td><span className="badge bg-danger">Delayed</span></td>
+                        <td style={{ color: "red" }}>-22 min</td>
+                        <td>3.3 KWh</td>
+                        <td><i className='fa fa-edit' style={{ color: 'green' }}></i></td>
                       </tr>
                     </tbody>
+
                   </Table>
                 </PerfectScrollbar>
               </div>
