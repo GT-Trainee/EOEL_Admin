@@ -1,23 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { AgGridReact } from 'ag-grid-react';
-import 'ag-grid-community/styles/ag-grid.css';
-import 'ag-grid-community/styles/ag-theme-alpine.css';
 import axios from 'axios';
-import './style.css';
-
-// react-bootstrap
 import { Row, Col, Button, Breadcrumb } from 'react-bootstrap';
-
-// Material-UI
 import Stack from '@mui/material/Stack';
 import Pagination from '@mui/material/Pagination';
 import TextField from '@mui/material/TextField';
 import { useNavigate } from 'react-router-dom';
-
-// project import
 import Card from '../../components/Card/MainCard';
+import AgGrid from 'components/Ag-Grid/AgGrid';
 
-// Cell Renderer function for status
+// Cell Renderer for status
 const StatusCellRenderer = (params) => {
   const status = params.value;
   let badgeClass = 'badge';
@@ -31,12 +22,12 @@ const StatusCellRenderer = (params) => {
   return <span className={badgeClass}>{status}</span>;
 };
 
-// Internal Cell Renderer function for edit actions
+// Edit action cell renderer
 const EditCellRenderer = (props) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    const userId = props.data.userId; // or whichever field represents the user ID
+    const userId = props.data.userId;
     navigate(`/user/editDetails`);
   };
 
@@ -44,7 +35,7 @@ const EditCellRenderer = (props) => {
     <div className="text-center">
       <i
         className="feather icon-edit"
-        style={{ cursor: 'pointer', color: '#007bff' }} // Blue color for the edit icon
+        style={{ cursor: 'pointer', color: '#007bff' }}
         onClick={handleClick}
       />
     </div>
@@ -61,7 +52,7 @@ const UserDetails = () => {
     {
       headerName: 'Status',
       field: 'status',
-      cellRenderer: 'statusCellRenderer' // Use custom cell renderer
+      cellRenderer: 'statusCellRenderer'
     },
     {
       headerName: 'Actions',
@@ -145,20 +136,16 @@ const UserDetails = () => {
               />
               <Button className="bg-primary addbtn" onClick={handleAddUser}>Create User +</Button>
             </div>
-            <div className="ag-theme-alpine mt-2" style={{ height: '380px', width: '100%' }}>
-              <AgGridReact
-                columnDefs={columnDefs}
-                rowData={paginatedData}
-                domLayout="autoHeight"
-                onGridReady={(params) => params.api.sizeColumnsToFit()}
-                components={{
-                  statusCellRenderer: StatusCellRenderer,
-                  editCellRenderer: EditCellRenderer
-                }}
-                suppressHorizontalScroll={true}
-              />
-            </div>
-
+            {/* Use the AgGridComponent here */}
+            <AgGrid
+              columnDefs={columnDefs}
+              rowData={paginatedData}
+              customComponents={{
+                statusCellRenderer: StatusCellRenderer,
+                editCellRenderer: EditCellRenderer
+              }}
+              height="380px"
+            />
             <div className="mt-4 d-flex justify-content-center">
               <Stack spacing={2}>
                 <Pagination

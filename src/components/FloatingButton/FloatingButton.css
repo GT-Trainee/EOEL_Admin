@@ -17,10 +17,6 @@
   cursor: pointer;
 }
 
-.settings-button:hover {
-  transform: translateY(-50%) scale(1.1); /* Scale effect on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhance shadow */
-}
 
 .settings-button i {
   font-size: 30px; /* Size for the settings icon */
