@@ -6,7 +6,7 @@ import { Row, Col, Button, Form } from 'react-bootstrap';
 // project import
 import Card from '../../components/Card/MainCard';
 
-const BasicButton = () => {
+const FileUpload = () => {
   // Form state
   const [formData, setFormData] = useState({
     name: '',
@@ -104,4 +104,4 @@ const BasicButton = () => {
   );
 };
 
-export default BasicButton;
+export default FileUpload;

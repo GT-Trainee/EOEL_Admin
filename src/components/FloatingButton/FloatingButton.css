@@ -1,0 +1,99 @@
+/* Floating Button (Settings Icon) */
+.settings-button {
+  position: fixed;
+  top: 33%; /* Position the button vertically in the center */
+  right: 10px; /* Align button to the right */
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff; /* Blue color for the settings button */
+  border-radius: 30px 0 0 30px; /* Curved border for left side */
+  width: 70px;
+  height: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.settings-button:hover {
+  transform: translateY(-50%) scale(1.1); /* Scale effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhance shadow */
+}
+
+.settings-button i {
+  font-size: 30px; /* Size for the settings icon */
+  color: white; /* White color for the icon */
+}
+
+.settings-button-tooltip {
+  position: absolute;
+  top: -40px; /* Tooltip positioned above the button */
+  right: 60px; /* Offset to the left of the button */
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.settings-button:hover .settings-button-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end; /* Align modal content to the right */
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px 0 0 8px; /* Rounded corners on the left */
+  height: 80%; /* Full height */
+  width: 50%; /* Full right side width */
+  max-width: 400px; /* Maximum width */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  animation: slide-in-right 0.3s ease-out; /* Animation to slide in from right */
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: red;
+}
+
+/* Slide-in animation */
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%); /* Start outside of the screen */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* Final position */
+    opacity: 1;
+  }
+}

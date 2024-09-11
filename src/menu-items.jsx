@@ -31,39 +31,55 @@ const menuItems = {
               id: 'button',
               title: 'File Upload',
               type: 'item',
-              url: '/basic/button'
+              url: '/FileUpload/FileUpload'
               
             },
             {
               id: 'badges',
               title: 'User',
-              type: 'item',
-              url: '/basic/badges'
+              type: 'collapse', // Change type to 'collapse'
+              url: '/basic/user',
+              children: [ // Add child elements for 'User'
+                {
+                  id: 'profile',
+                  title: 'User Details',
+                  type: 'item',
+                  url: '/user/UserDetails'
+                },
+                {
+                  id: 'settings',
+                  title: 'User Mapping',
+                  type: 'item',
+                  url: '/user/UserMapping'
+                }
+              ]
+            },  
+            {
+              id: 'role',
+              title: 'Role',
+              type: 'collapse', // Change type to 'collapse'
+              children: [ // Add child elements for 'Role'
+                {
+                  id: 'admin-role',
+                  title: 'Role Details',
+                  type: 'item',
+                  url: '/Roles/Roles'
+                },
+                {
+                  id: 'admin-role',
+                  title: 'Role Mapping',
+                  type: 'item',
+                  url: '/Roles/RoleMapping'
+                }
+              ]
             },
+                      
             {
               id: 'breadcrumb-pagination',
               title: 'Reports',
               type: 'item',
-              url: '/basic/breadcrumb-pagination'
+              url: '/Reports/IndianRailwayReport'
             },
-            // {
-            //   id: 'collapse',
-            //   title: 'Help',
-            //   type: 'item',
-            //   url: '/basic/collapse'
-            // },
-            // {
-            //   id: 'typography',
-            //   title: 'Typography',
-            //   type: 'item',
-            //   url: '/basic/typography'
-            // },
-            // {
-            //   id: 'tooltip-popovers',
-            //   title: 'Tooltip & Popovers',
-            //   type: 'item',
-            //   url: '/basic/tooltip-popovers'
-            // }
           ]
         }
       ]

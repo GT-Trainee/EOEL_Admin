@@ -7,6 +7,7 @@ import { Row, Col, Card, Table, ListGroup } from 'react-bootstrap';
 import Chart from 'react-apexcharts';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import './index.css';
+import FloatingButton from 'components/FloatingButton/FloatingButton';
 
 // project import
 import OrderCard from '../../components/Widgets/Statistic/OrderCard';
@@ -257,7 +258,7 @@ const DashAnalytics = () => {
             </Card.Body>
           </Card>
         </Col> */}
-
+<FloatingButton />
         <Col sm={12}>
           <Card>
             <Card.Header>

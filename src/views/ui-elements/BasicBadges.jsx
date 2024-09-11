@@ -29,7 +29,7 @@ const StatusCellRenderer = (params) => {
 const BasicBadges = () => {
   const [show, setShow] = useState(false); // State to control the modal visibility
   const [columnDefs] = useState([
-    { headerName: 'User ID', field: 'id' },
+    { headerName: 'User ID', field: 'id'},
     { headerName: 'Name', field: 'name' },
     { headerName: 'Role', field: 'role' },
     { headerName: 'Contact', field: 'contact' },
@@ -73,7 +73,7 @@ const BasicBadges = () => {
       <Row>
         <Col className="btn-page">
           <Card title="User Details">
-            <div className="d-flex justify-content-end mb-3">
+            <div className="d-flex justify-content-end mb-1" style={{marginTop:'-35px'}}>
               <Button className="bg-primary" onClick={handleShow}>Add +</Button>
             </div>
             <div className="ag-theme-quartz mt-2" style={{ height: 'auto', width: '100%' }}>

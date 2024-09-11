@@ -1,0 +1,165 @@
+/* Add custom styles for the ag-Grid container */
+.ag-theme-alpine {
+    --ag-background-color: #f8f9fa; /* Light background color */
+    --ag-header-background-color: #bbd4ef; /* Header background color */
+    --ag-header-font-color: #ffffff; /* Header text color */
+    --ag-row-hover-color: #e9ecef; /* Row hover color */
+    --ag-border-color: #dee2e6; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  /* Override default styling of the grid */
+  .ag-theme-alpine .ag-header-cell {
+    font-weight: 600; /* Make header text bold */
+    justify-content: center;
+  }
+  
+  .ag-theme-alpine .ag-cell {
+    border: 1px solid #dee2e6; /* Border color for cells */
+    justify-content: center;
+  }
+  
+    
+   /* styles.css */
+  
+  .custom-pagination .pagination {
+      justify-content: center;
+    }
+    
+    .custom-pagination .page-item.active .page-link {
+      background-color: #28a745; /* Green background for active page */
+      border-color: #28a745; /* Green border for active page */
+    }
+    
+    .custom-pagination .page-link {
+      color: #007bff; /* Default color for pagination links */
+      border: 1px solid #007bff; /* Border color for pagination links */
+    }
+    
+    .custom-pagination .page-link:hover {
+      background-color: #e9ecef; /* Light gray background on hover */
+      border-color: #007bff; /* Border color on hover */
+    }
+    
+    .custom-card {
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+    
+    .custom-card .card-title {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    
+    .custom-card .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .custom-card .table {
+      margin-top: 20px;
+    }
+    
+    .custom-card .btn {
+      margin-top: 20px;
+    }
+    
+    /* styles.css */
+  .small-input {
+      max-width: 300px; /* Adjust width as needed */
+      margin: auto;
+    }
+    
+    .form-group {
+      margin-bottom: 1rem; /* Adjust spacing between form fields */
+    }
+    
+    button {
+      margin-top: 1rem; /* Space between last input and button */
+    }
+    
+    .text-muted {
+      margin-top: 0.25rem; /* Space above the help text */
+    }
+    
+    .addbtn {
+      background-color: #007bff; /* Primary blue color */
+      color: white; /* Text color */
+      font-size: 16px; /* Font size */
+      font-weight: 300; /* Font weight */
+      border-radius: 4px; /* Rounded corners */
+      padding: 5px 10px; /* Padding */
+      text-transform: uppercase; /* Uppercase text */
+      transition: background-color 0.3s, box-shadow 0.3s; /* Transition effect */
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); 
+      /* margin-top: -2px; */
+    }
+    
+    .addbtn:hover {
+      background-color: #0056b3; /* Darker blue on hover */
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* More shadow on hover */
+    }
+    
+    .addbtn:focus {
+      outline: none; /* Remove default outline */
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Focus ring effect */
+      background-color: #0056b3; /* Optional: Change background color on focus */
+    }
+    
+    .search-container {
+      display: flex;
+      align-items: center;
+      margin-top: -35px; /* Adjust as needed */
+      justify-content: flex-end; /* Align items to the right */
+      padding-right: 20px; /* Add some padding to the right */
+    }
+    
+    .search-container .MuiTextField-root {
+      margin-right: 16px; /* Adjust space between search input and button */
+    }
+    
+   
+    
+    .custom-card{
+      border-radius: 0.5rem;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .custom-form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .custom-select {
+      border-radius: 0.25rem;
+      border: 1px solid #ced4da;
+    }
+    
+    .custom-button {
+      border-radius: 0.25rem;
+      font-weight: bold;
+    }
+    
+    .custom-button-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    
+    /* .custom-button-secondary {
+      background-color: #6c757d;
+      border-color: #6c757d;
+    }
+     */
+    .custom-form-col {
+      background-color: #f8f9fa;
+      padding: 1rem;
+      border-radius: 0.25rem;
+    }
+    
+    .custom-table {
+      margin-top: 1.5rem;
+    }
+    
+    .custom-alert {
+      margin-bottom: 1.5rem;
+    }
+    

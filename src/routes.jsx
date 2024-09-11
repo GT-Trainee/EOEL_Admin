@@ -65,18 +65,48 @@ export const routes = [
       },
       {
         exact: 'true',
-        path: '/basic/button',
-        element: lazy(() => import('./views/ui-elements/BasicButton'))
+        path: '/FileUpload/FileUpload',
+        element: lazy(() => import('./modules/UploadFile/UploadFile'))
       },
       {
         exact: 'true',
-        path: '/basic/badges',
-        element: lazy(() => import('./views/ui-elements/BasicBadges'))
+        path: '/user/AddUser',
+        element: lazy(() => import('./modules/User/Add/AddUser'))
       },
       {
         exact: 'true',
-        path: '/basic/breadcrumb-pagination',
-        element: lazy(() => import('./views/ui-elements/BasicBreadcrumbPagination'))
+        path: '/user/editDetails',
+        element: lazy(() => import('./modules/User/Edit/EditDetails'))
+      },
+      {
+        exact: 'true',
+        path: '/user/UserDetails',
+        element: lazy(() => import('./modules/User/UserDetails'))
+      },
+      {
+        exact: 'true',
+        path: '/user/UserMapping',
+        element: lazy(() => import('./modules/UserMapping/UserMappingForm'))
+      },
+      {
+        exact: 'true',
+        path: '/Roles/Roles',
+        element: lazy(() => import('./modules/Roles/Roles'))
+      },
+      {
+        exact: 'true',
+        path: '/Roles/RoleMapping',
+        element: lazy(() => import('./modules/RolesMapping/RoleMappingForm'))
+      },
+      {
+        exact: 'true',
+        path: '/Roles/AddRoles',
+        element: lazy(() => import('./modules/Roles/Add/AddRoles'))
+      },
+      {
+        exact: 'true',
+        path: '/Reports/IndianRailwayReport',
+        element: lazy(() => import('./modules/Reports/IndianRailwayReport'))
       },
       {
         exact: 'true',
